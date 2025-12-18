@@ -24,13 +24,13 @@ app.use(express.urlencoded({ extended: true }))
 // ✅ Security Headers for Firebase Auth
 app.use((req, res, next) => {
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups')
-  res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp')
+  res.setHeader('Cross-Origin-Embedder-Policy', 'unsafe-none')
   next()
 })
 
 // ✅ CORS (FIXED)
 app.use(cors({
-  origin: [process.env.FRONTEND_PROD_URL, process.env.FRONTEND_URL],
+  origin: [ process.env.FRONTEND_URL],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }))
