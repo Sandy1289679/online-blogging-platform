@@ -20,14 +20,13 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL || 'https://online-blogging-platform-5i72.vercel.app',
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  })
-)
+import cors from "cors";
+
+app.use(cors({
+  origin: "https://online-blogging-platform-5i72.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 // ------------------------------------------------
 
 // ---------------- ROUTES ------------------------
