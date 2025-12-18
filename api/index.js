@@ -28,9 +28,6 @@ app.use(cors({
   credentials: true
 }))
 
-// ✅ Handle preflight explicitly
-app.options("*", cors())
-
 // ---------------- ROUTES ----------------
 app.use('/api/auth', AuthRoute)
 app.use('/api/user', UserRoute)
