@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // ✅ CORS (FIXED)
 app.use(cors({
-  origin: "https://online-blogging-platform-5i72.vercel.app",
+  origin: [process.env.FRONTEND_PROD_URL, process.env.FRONTEND_URL],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }))
