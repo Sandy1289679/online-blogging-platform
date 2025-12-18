@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Layout from './layout/Layout'
 import { RouteAddCategory, RouteBlog, RouteBlogAdd, RouteBlogDetails, RouteBlogEdit, RouteCategoryDetails, RouteEditCategory, RouteIndex, RouteProfile, RouteSignin, RouteSignup } from './helper/RouteName'
-import Index from './pages'
+import Index from './pages/Index'
 import Signin from './pages/Signin'
 import Signup from './pages/Signup'
 import Profile from './pages/Profile'
