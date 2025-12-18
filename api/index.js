@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 // ✅ CORS (FIXED)
 app.use(cors({
-  origin: [ process.env.FRONTEND_URL],
+  origin: [process.env.FRONTEND_PROD_URL, process.env.FRONTEND_URL],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }))
